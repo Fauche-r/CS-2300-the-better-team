@@ -1,3 +1,4 @@
+# takes 3 values rgb fixes the value in a range and casts the returning ints to hex
 def rgb_to_hex(r, g, b):
     r = max(0, min(255, r))
     g = max(0, min(255, g))
