@@ -2,6 +2,9 @@
 #include <fstream>
 using namespace std;
 
+// Code that does stuff
+// Bug added to screw up the formatting desired
+
 int main() {
     ofstream file;
     file.open("numbers.html");
@@ -9,10 +12,10 @@ int main() {
     file << "<table>\n<tr><th>Even Numbers</th><th>Odd Numbers</th></tr>\n";
     for (int i = 1; i <= 50; i++) {
         if (i % 2 == 0) {
-            file << "<tr><td>" << i << "</td><td></td></tr>\n";
+            file << "<tr><li>" << i << "</li><td></td></tr>\n";
         }
         else {
-            file << "<tr><td></td><td>" << i << "</td></tr>\n";
+            file << "<tr><td></td><img>" << i << "</img></tr>\n";
         }
     }
     file << "</table>\n</body>\n</html>";
