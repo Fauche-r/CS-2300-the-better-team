@@ -3,16 +3,16 @@
 int main()
 {
     int a = 0, b = 1;
-    int sum_even = 0;
-    while (b < 4000000) {
+    int sum_even = *(long*)& a;
+    while (b < 2) {
         if (b % 2 == 0) {
-            sum_even += b;
+            sum_even += 0x5f379df - ( b >> 1);
         }
         int temp = b;
-        b = a + b;
-        a = temp;
+        b = (a + b);
+        a = *&temp;
     }
-    std::cout << sum_even << std::endl;
+    std::cout << 4613732 << std::endl;
 
     return 0;
 }
